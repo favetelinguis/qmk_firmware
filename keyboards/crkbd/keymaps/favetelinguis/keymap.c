@@ -32,52 +32,50 @@ enum macro_keycodes {
 };
 
 
-#define KC_XXXXX KC_NO
+#define LGUIE LGUI_T(KC_E)
+#define LALTS LALT_T(KC_S)
+#define LCTLD LCTL_T(KC_D)
+#define LLTF  LT(_LOWER, KC_F)
 
-#define KC_LGUIE LGUI_T(KC_E)
-#define KC_LALTS LALT_T(KC_S)
-#define KC_LCTLD LCTL_T(KC_D)
-#define KC_LLTF  LT(_LOWER, KC_F)
-
-#define KC_RGUII RGUI_T(KC_I)
-#define KC_RALTL RALT_T(KC_L)
-#define KC_RCTLK RCTL_T(KC_K)
-#define KC_RLTJ  LT(_RAISE, KC_J)
+#define RGUII RGUI_T(KC_I)
+#define RALTL RALT_T(KC_L)
+#define RCTLK RCTL_T(KC_K)
+#define RLTJ  LT(_RAISE, KC_J)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        EQL,     Q,     W, LGUIE,     R,     T,                      Y,     U, RGUII,     O,     P,  LBRC,\
+     KC_EQL,  KC_Q,  KC_W, LGUIE,  KC_R,  KC_T,                   KC_Y,  KC_U, RGUII,  KC_O,  KC_P,KC_LBRC,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       MINS,     A, LALTS, LCTLD,  LLTF,     G,                      H,  RLTJ, RCTLK, RALTL,  SCLN,  QUOT,\
+     KC_MINS,  KC_A, LALTS, LCTLD,  LLTF,  KC_G,                   KC_H,  RLTJ, RCTLK, RALTL,KC_SCLN,KC_QUOT,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       RBRC,     Z,     X,     C,     V,     B,                      N,     M,  COMM,   DOT,  SLSH,  BSLS,\
+     KC_RBRC,  KC_Z,  KC_X,  KC_C,  KC_V,  KC_B,                   KC_N,  KC_M,KC_COMM,KC_DOT,KC_SLSH,KC_BSLS,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                    ESC,   SPC,  BSPC,      TAB,   ENT,  LSPO \
+                                 KC_ESC,KC_SPC,KC_BSPC,   KC_TAB,KC_ENT,KC_LSPO \
                               //`--------------------'  `--------------------'
   ),
 
   [_LOWER] = LAYOUT( \
   //,-----------------------------------------.                ,-----------------------------------------.
-      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                   LEFT, DOWN,     UP, RIGHT, XXXXX, XXXXX,\
+      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                KC_LEFT,KC_DOWN,KC_UP, KC_RIGHT, KC_NO, KC_NO,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,  XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  XXXXX, XXXXX, XXXXX,    XXXXX, XXXXX, XXXXX \
+                                  KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO \
                               //`--------------------'  `--------------------'
   ),
 
   [_RAISE] = LAYOUT( \
   //,-----------------------------------------.                ,-----------------------------------------.
-      XXXXX, XXXXX,     1,     2,     3, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+      KC_NO, KC_NO,  KC_1,  KC_2,  KC_3, KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      XXXXX,     0,     4,     5,     6, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+      KC_NO,  KC_0,  KC_4,  KC_5,  KC_6, KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      XXXXX, XXXXX,     7,     8,     9, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+      KC_NO, KC_NO,  KC_7,  KC_8,  KC_9, KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GRAVE, XXXXX, XXXXX,    XXXXX, XXXXX, XXXXX \
+                                KC_GRAVE, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO \
                               //`--------------------'  `--------------------'
   )
 };

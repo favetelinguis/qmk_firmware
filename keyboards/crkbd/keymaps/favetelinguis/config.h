@@ -33,7 +33,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL_PD2
 
 #define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 100
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
@@ -44,3 +43,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
 #endif
+
+// Below are my changes
+#define AUTO_SHIFT_TIMEOUT 150
+#define NO_AUTO_SHIFT_ALPHA
+
+#define TAPPING_TERM 175 // For ctrl/alt dual key timeout

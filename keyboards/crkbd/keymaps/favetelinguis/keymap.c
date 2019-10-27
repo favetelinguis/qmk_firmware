@@ -42,6 +42,8 @@ enum macro_keycodes {
 #define RCTLK RCTL_T(KC_K)
 #define RLTJ  LT(_RAISE, KC_J)
 
+#define TOA  OSL(_ADJUST)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT( \
   //,-----------------------------------------.                ,-----------------------------------------.
@@ -63,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_BSLS, KC_NO,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO \
+                                  KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, TOA \
                               //`--------------------'  `--------------------'
   ),
 
@@ -76,6 +78,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO, KC_RBRC,  KC_7,  KC_8,  KC_9, KC_NO,                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                 KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO \
+                              //`--------------------'  `--------------------'
+  ),
+
+  [_ADJUST] = LAYOUT( \
+  //,-----------------------------------------.                ,-----------------------------------------.
+      KC_NO, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12,                KC_NO, KC_NO, KC_RGUI, KC_NO, KC_NO, KC_NO,\
+  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
+      KC_NO, KC_NO, KC_F4, KC_F5, KC_F6, KC_F11,                KC_NO, KC_RSFT, KC_RCTRL, KC_ALGR, KC_NO, KC_NO,\
+  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
+      KC_NO, KC_NO, KC_F7, KC_F8, KC_F9,  KC_F10,               KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
+  //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
+                                  KC_NO, KC_NO, KC_NO,    KC_INS, KC_DEL, KC_NO \
                               //`--------------------'  `--------------------'
   )
 };

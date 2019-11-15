@@ -1,6 +1,8 @@
 BOOTLOADER = atmel-dfu
 
+# My changes
 AUTO_SHIFT_ENABLE = yes
+#-----
 NKRO_ENABLE = yes
 
 # If you want to change the display of OLED, you need to change here
